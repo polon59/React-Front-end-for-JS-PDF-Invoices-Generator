@@ -7,17 +7,25 @@ class InvoicesList extends Component{
         const { invoices } = this.props;
         const invoicesList = invoices.map(invoice =>{
             return (
-                <div>
-                    <h4>{invoice.id}</h4>
-                    <h4>{invoice.title}</h4>
-                    <h4>{invoice.billTo}</h4>
-                </div>
+                <tr>
+                    <td>{invoice.id}</td>
+                    <td>{invoice.title}</td>
+                    <td>{invoice.billTo}</td>
+                </tr>
             );
         });
 
         return(
             <div>
-                {invoicesList}
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>TITLE</th>
+                        <th>BILL TO</th>
+                    </tr>
+                    {invoicesList}
+                </table>
+                
             </div>
         );
     }
