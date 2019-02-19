@@ -4,8 +4,8 @@ class Navbar extends Component{
     render(){
         return(
             <div>
-                <div>Option 1</div>
-                <div>Description 1</div>
+                <div>{this.props.title}</div>
+                <div>{this.props.desc}</div>
             </div>
         );
     }
