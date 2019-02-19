@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './navbar';
 import InvoicesList from './InvoicesList';
+import AddInvoice from './AddInvoice';
 
 
 class App extends Component {
@@ -24,6 +25,8 @@ class App extends Component {
 
           <InvoicesList invoices={this.state.invoices}/>
         </header>
+        <br/>
+        <AddInvoice />
       </div>
     );
   }

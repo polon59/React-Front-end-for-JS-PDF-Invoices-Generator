@@ -12,10 +12,15 @@ class AddInvoice extends Component{
         });
     }
 
+    handleSubmit = (e) =>{
+        e.preventDefault();
+        console.log(this.state);
+    }
+
     render(){
         return(
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label htmlFor="title">Title</label>
                     <input type="text" id="title" onChange={this.handleChange}/>
                     <label htmlFor="title">BillTo</label>
@@ -26,3 +31,5 @@ class AddInvoice extends Component{
         )
     }
 }
+
+export default AddInvoice;
