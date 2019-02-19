@@ -7,7 +7,7 @@ class InvoicesList extends Component{
         const { invoices } = this.props;
         const invoicesList = invoices.map(invoice =>{
             return (
-                <tr>
+                <tr key={invoice.id}>
                     <td>{invoice.id}</td>
                     <td>{invoice.title}</td>
                     <td>{invoice.billTo}</td>
@@ -18,12 +18,16 @@ class InvoicesList extends Component{
         return(
             <div>
                 <table>
-                    <tr>
-                        <th>ID</th>
-                        <th>TITLE</th>
-                        <th>BILL TO</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>TITLE</th>
+                            <th>BILL TO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                     {invoicesList}
+                    </tbody>
                 </table>
                 
             </div>
