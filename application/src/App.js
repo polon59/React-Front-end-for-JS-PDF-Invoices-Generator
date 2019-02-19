@@ -14,6 +14,14 @@ class App extends Component {
     ]
   }
 
+  addInvoice = (invoice) => {
+    invoice.id = Math.random();
+    let invoices = [...this.state.invoices, invoice];
+    this.setState({
+      invoices: invoices
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -26,7 +34,7 @@ class App extends Component {
           <InvoicesList invoices={this.state.invoices}/>
         </header>
         <br/>
-        <AddInvoice />
+        <AddInvoice addInvoice={this.addInvoice}/>
       </div>
     );
   }
