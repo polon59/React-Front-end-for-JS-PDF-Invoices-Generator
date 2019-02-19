@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Navbar title="Opt1" desc="descr1"/>
+          <Navbar/>
           <p>
             React application
           </p>
