@@ -13,10 +13,21 @@
         
         <script type="text/babel">
             class App extends React.Component{
+                state = {
+                    name : "nejm",
+                    age : 30
+                }
+
+                handleClick(e){
+                    console.log(e.target);
+                }
+
                 render(){
                     return (
                         <div className="app-content">
                             <h1>Hello</h1>
+                            <p>name is: { this.state.name }</p>
+                            <button onClick={this.handleClick}>baton</button>
                         </div>
                     );
                 }
